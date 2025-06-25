@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmação de Presença</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #dfe6f3; /* azul claro suave */
+    }
+    .azul-royal {
+      color: #06108b;
+    }
+    .bg-azul-royal {
+      background-color: #06108b;
+    }
+    .hover\\:bg-azul-royal-dark:hover {
+      background-color: #030761;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full">
+    <h1 class="text-3xl font-bold text-center azul-royal mb-6">Confirmar Presença</h1>
+    <p class="text-center text-gray-600 mb-6">
+      Padrinhos e Madrinhas, por favor confirmem presença até o dia <strong>15/08</strong>.
+    </p>
+    
+    <form action="https://formsubmit.co/SEUEMAIL@gmail.com" method="POST" class="space-y-4">
+      <!-- Configurações escondidas do FormSubmit -->
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="Nova Confirmação de Presença">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_autoresponse" value="Sua confirmação foi recebida com sucesso! Obrigado!">
+
+      <div>
+        <label for="nome" class="block text-sm font-medium text-gray-700">Seu nome</label>
+        <input type="text" id="nome" name="Nome" required
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#06108b]" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Vai comparecer?</label>
+        <div class="flex space-x-4">
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="Presença" value="Sim" required class="accent-[#06108b]" />
+            <span>Sim</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="Presença" value="Não" class="accent-[#06108b]" />
+            <span>Não</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-azul-royal hover:bg-azul-royal-dark text-white font-semibold py-2 rounded-xl transition">
+        Enviar Confirmação
+      </button>
+    </form>
+
+    <div class="text-xs text-center text-gray-400 mt-4">
+      Desenvolvido com ❤️ para um momento especial
+    </div>
+  </div>
+
+</body>
+</html>
